@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  color: #37474e;
+  font-family: sans-serif;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: unset;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url('https://via.placeholder.com/1500x1500/ede2e3');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  margin: 0 1rem;
+}
+
+.main-header .banner {
+  height: 20rem;
+  background-image: url('https://via.placeholder.com/1500x300');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 5px 10px 0px #d3d3d3;
+}
+
+.main-header .banner h1 {
+  color: white;
+  font-size: 4.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin: 0 1rem 0.5rem;
+}
+
+.main-header .message {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2rem 1rem 0;
+}
+
+.main-header .navigation {
+  margin: 4rem 1rem 0;
+}
+
+.main-header .navigation .nav-list {
+  display: flex;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;
+}
+
+.main-header .navigation .nav-list li {
+  border-right: 1px solid #d3d3d3;
+  padding: 1rem;
+}
+
+.main-header .navigation .nav-list li:last-child {
+  border-right: none;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: 'Caveat', cursive;
+  font-size: 5rem;
+  margin: 3rem 0;
+}
+
+.section-content .description {
+  max-width: 1000px;
+  margin: 1rem auto;
+  line-height: 1.5rem;
+}
+
+.recipes .recipes-carousel,
+.cards .cards-carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.recipes .recipes-list,
+.cards .cards-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.recipes .recipes-list {
+  max-width: 700px;
+  margin-top: 0;
+}
+
+.recipes .recipes-list .recipe {
+  padding: 1.5rem;
+  min-width: calc(100% / 3);
+}
+
+.recipes .recipes-list .recipe a {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes .recipes-list .recipe img {
+  border-radius: 50%;
+}
+
+.recipes .recipes-list .recipe span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-container .arrow {
+  cursor: pointer;
+  width: 1.7rem;
+}
+
+.more-recipes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.more-recipes a {
+  padding: 0.7rem 1.8rem 0.7rem 1rem;
+  border: 2px solid #37474e;
+  border-radius: 2rem;
+  margin-right: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.more-recipes a:last-child {
+  margin-right: 0;
+}
+
+.more-recipes a::after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-image: url('./assets/link-arrow.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.classic-recipes h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+}
+
+.classic-recipes .videos-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.classic-recipes .videos-list .video {
+  margin-right: 1.2rem;
+  width: calc((100% - 1.2rem) / 2);
+}
+
+.classic-recipes .videos-list .video .iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.classic-recipes .videos-list .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.classic-recipes .videos-list .video:last-child {
+  margin-right: 0;
+}
+
+.inspiration .categories-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.2rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.inspiration .categories-list .category {
+  width: 18rem;
+  height: 8.5rem;
+  background-image: url('https://via.placeholder.com/300x150');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 7px 11px 0px #b3b2b2;
+}
+
+.inspiration .categories-list .category a {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.inspiration .categories-list .category-name {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-image: url('https://via.placeholder.com/150x150/bf4f60');
+}
+
+.inspiration .categories-list .category-name span {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.cards .description {
+  font-size: 1.1rem;
+}
+
+.cards .cards-list {
+  max-width: 1300px;
+}
+
+.cards .cards-list .card {
+  padding: 2.5rem;
+  min-width: calc(100% / 3);
+}
+
+.cards .cards-list .card img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #9e9e9e;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+.cards .cards-list .card.left img {
+  transform: perspective(800px) rotateY(25deg) scale(0.9, 0.9);
+  transition: 0.7s ease-in-out;
+}
+
+.cards .cards-list .card.right img {
+  transform: perspective(800px) rotateY(-25deg) scale(0.8, 0.7);
+  transition: 0.7s ease-in-out;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+  .inspiration .categories-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .cards .cards-list .card {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recipes .recipes-list .recipe {
+    min-width: calc(100% / 2);
+  }
+
+  .classic-recipes .videos-list {
+    flex-direction: column;
+  }
+
+  .classic-recipes .videos-list .video {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+
+  .cards .cards-list {
+    max-width: 70%;
+    margin: 1rem;
+  }
+
+  .cards .cards-list .card {
+    min-width: 100%;
+    padding: 0;
+  }
+
+  .cards .cards-list .card.left img,
+  .cards .cards-list .card.right img {
+    transform: none;
+    transition: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .recipes .recipes-list {
+    max-width: 70%;
+    margin: 1rem;
+  }
+
+  .recipes .recipes-list .recipe {
+    padding: 1.5rem 0;
+    min-width: 100%;
+  }
+
+  .inspiration .categories-list {
+    grid-template-columns: 1fr;
+  }
+}
