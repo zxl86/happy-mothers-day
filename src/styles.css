@@ -21,6 +21,7 @@ a:visited {
 
 ul {
   list-style: none;
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
 
@@ -223,6 +224,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
